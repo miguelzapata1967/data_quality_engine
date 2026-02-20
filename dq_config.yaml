@@ -1,1 +1,10 @@
-
+tables:
+  customers:
+    enable: true
+    rules:
+     - check_null_customer_name.sql
+     - check_duplicate_customer_email.sql
+  Orders:
+    enable: true
+    rules:
+      - check_null_order_date.sql
