@@ -5,4 +5,5 @@ SELECT
       COUNT(*)*1.0 / (SELECT COUNT(*) from customers) AS null_customer_name_persentage
 FROM
       customers
-WHERE customer_name IS NULL;
+WHERE customer_name IS NULL
+  AND is_active = 1;
